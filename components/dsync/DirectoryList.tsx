@@ -8,7 +8,7 @@ const DSyncDirectoryList = ({ setupLinkToken }: { setupLinkToken?: string }) => 
   const { t } = useTranslation('common');
   const router = useRouter();
 
-  const isSetupLinkView = setupLinkToken ? true : false;
+  const isSetupLinkView = Boolean(setupLinkToken);
   const getDirectoriesUrl = setupLinkToken
     ? `/api/setup/${setupLinkToken}/directory-sync`
     : '/api/admin/directory-sync';
