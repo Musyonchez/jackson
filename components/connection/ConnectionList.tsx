@@ -16,7 +16,7 @@ const SSOConnectionList = ({
   const { t } = useTranslation('common');
   const router = useRouter();
 
-  const isSetupLinkView = setupLinkToken ? true : false;
+  const isSetupLinkView = Boolean(setupLinkToken);
   const getConnectionsUrl = setupLinkToken
     ? `/api/setup/${setupLinkToken}/sso-connection`
     : isSettingsView
